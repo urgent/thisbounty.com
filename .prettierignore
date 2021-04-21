@@ -1,0 +1,8 @@
+.next
+cypress
+.husky
+yarn.lock
+.prettierignore
+components/__snapshots__/**/*
+.gitignore
+public/bio/*
