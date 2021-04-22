@@ -1,3 +1,20 @@
+# thisbounty.com
+
+No Catch, No Pay!
+
+Software marketplace focusing on:
+
+1. Automate setup work
+2. Reference for specialized work
+3. Break projects down into smaller tasks, and resell
+4. Launch new sites and apps from past work and abandoned rpojects
+
+## Automate
+
+1. Fork thisbounty.com clean
+2. Deploy to Netlify
+3. Create a Github OAuth app. Add env variables for GITHUB_ID, GITHUB_SECRET and NEXTAUTH_URL
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
