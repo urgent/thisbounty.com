@@ -15,13 +15,17 @@ export default function Home() {
         {!session && (
           <>
             Not signed in <br />
-            <button onClick={() => signIn()}>Sign in</button>
+            <button data-cy="signIn" onClick={() => signIn()}>
+              Sign in
+            </button>
           </>
         )}
         {session && (
           <>
             Signed in as {session.user.name} <br />
-            <button onClick={() => signOut()}>Sign out</button>
+            <button data-cy="signOut" onClick={() => signOut()}>
+              Sign out
+            </button>
           </>
         )}
       </nav>
