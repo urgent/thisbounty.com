@@ -12,6 +12,9 @@ function MyApp({ Component, pageProps }) {
           templateColumns="[sidebar] 1fr [content] 3fr [info] 1fr"
           templateRows={["[nav] 40px [body] auto", "[nav] 100px [body] auto"]}
           gap={6}
+          bg="brand.400"
+          color="white"
+          minHeight="100vh"
         >
           <Component {...pageProps} />
         </Grid>

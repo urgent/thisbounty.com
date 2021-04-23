@@ -1,17 +1,17 @@
 import Head from "next/head";
 import { signIn, signOut, useSession } from "next-auth/client";
+import { Grid } from "@chakra-ui/react";
 
 export default function Home() {
   const [session, loading] = useSession();
 
   return (
-    <div>
+    <>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <nav>
+      <Grid as="nav">
         {!session && (
           <>
             Not signed in <br />
@@ -28,17 +28,17 @@ export default function Home() {
             </button>
           </>
         )}
-      </nav>
+      </Grid>
 
-      <main>
+      <Grid as="main">
         <h1>Welcome!</h1>
-      </main>
+      </Grid>
 
       <footer>
         <a href="/" target="_blank" rel="noopener noreferrer">
           Home
         </a>
       </footer>
-    </div>
+    </>
   );
 }
