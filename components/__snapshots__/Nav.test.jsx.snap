@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<nav
+  className="css-i6ei9o"
+  data-cy="nav"
+>
+  <div
+    className="css-exb9x5"
+  >
+    <a
+      href="/"
+    >
+      thisbounty.com
+    </a>
+  </div>
+  <div
+    className="css-ade8ji"
+  >
+    <button
+      className="chakra-button css-1v83zyk"
+      data-cy="signIn"
+      onClick={[Function]}
+    >
+      Sign in
+    </button>
+  </div>
+</nav>
+`;

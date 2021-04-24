@@ -1,6 +1,7 @@
 import Head from "next/head";
+import Nav from "../components/Nav";
 import { signIn, signOut, useSession } from "next-auth/client";
-import { Grid } from "@chakra-ui/react";
+import { Grid, Box } from "@chakra-ui/react";
 
 export default function Home() {
   const [session, loading] = useSession();
@@ -11,34 +12,15 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Grid as="nav">
-        {!session && (
-          <>
-            Not signed in <br />
-            <button data-cy="signIn" onClick={() => signIn()}>
-              Sign in
-            </button>
-          </>
-        )}
-        {session && (
-          <>
-            Signed in as {session.user.name} <br />
-            <button data-cy="signOut" onClick={() => signOut()}>
-              Sign out
-            </button>
-          </>
-        )}
-      </Grid>
+      <Nav />
 
-      <Grid as="main">
+      <Grid as="main" gridRow="body" gridColumn="content">
         <h1>Welcome!</h1>
       </Grid>
 
-      <footer>
-        <a href="/" target="_blank" rel="noopener noreferrer">
-          Home
-        </a>
-      </footer>
+      <Box as="footer" sx={{ gridRow: "footer", gridColumn: "content" }}>
+        <a href="/">Home</a>
+      </Box>
     </>
   );
 }

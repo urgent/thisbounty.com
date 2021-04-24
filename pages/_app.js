@@ -10,7 +10,10 @@ function MyApp({ Component, pageProps }) {
         <Grid
           data-cy="grid"
           templateColumns="[sidebar] 1fr [content] 3fr [info] 1fr"
-          templateRows={["[nav] 40px [body] auto", "[nav] 100px [body] auto"]}
+          templateRows={[
+            "[nav] 40px [body] auto [footer] 80px",
+            "[nav] 100px [body] auto [footer] 400px",
+          ]}
           gap={6}
           bg="brand.400"
           color="white"
