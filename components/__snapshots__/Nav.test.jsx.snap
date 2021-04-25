@@ -27,3 +27,37 @@ exports[`renders correctly 1`] = `
   </div>
 </nav>
 `;
+
+exports[`renders correctly 2`] = `
+<nav
+  className="css-i6ei9o"
+  data-cy="nav"
+>
+  <div
+    className="css-exb9x5"
+  >
+    <a
+      href="/"
+    >
+      thisbounty.com
+    </a>
+  </div>
+  <div
+    className="css-ade8ji"
+  >
+    <p
+      className="chakra-text css-1lj023j"
+    >
+      Welcome, 
+      test
+    </p>
+    <button
+      className="chakra-button css-oqfhsh"
+      data-cy="signOut"
+      onClick={[Function]}
+    >
+      Sign out
+    </button>
+  </div>
+</nav>
+`;

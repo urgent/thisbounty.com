@@ -5,6 +5,10 @@ import { Grid, Text, Box, Button } from "@chakra-ui/react";
 export default function Nav() {
   const [session, loading] = useSession();
 
+  return <View session={session} loading={loading} />;
+}
+
+export function View({ session, loading }) {
   return (
     <Grid
       as="nav"

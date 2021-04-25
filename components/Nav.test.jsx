@@ -1,8 +1,12 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Nav from "./Nav";
+import { View } from "./Nav";
 
 it("renders correctly", () => {
-  const tree = renderer.create(<Nav />).toJSON();
-  expect(tree).toMatchSnapshot();
+  const loggedOut = renderer.create(<View />).toJSON();
+  expect(loggedOut).toMatchSnapshot();
+  const loggedIn = renderer
+    .create(<View session={{ user: { name: "test" } }} />)
+    .toJSON();
+  expect(loggedIn).toMatchSnapshot();
 });

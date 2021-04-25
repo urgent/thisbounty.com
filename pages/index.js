@@ -1,11 +1,9 @@
+import React from "react";
 import Head from "next/head";
 import Nav from "../components/Nav";
-import { signIn, signOut, useSession } from "next-auth/client";
 import { Grid, Box } from "@chakra-ui/react";
 
 export default function Home() {
-  const [session, loading] = useSession();
-
   return (
     <>
       <Head>
