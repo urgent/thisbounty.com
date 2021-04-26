@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <div
   className="css-1mr5rgs"
-  data-cy="bounty"
+  data-cy="bounty-undefined"
 >
   <img
     className="chakra-image__placeholder css-jcgxpa"
@@ -13,9 +13,7 @@ exports[`renders correctly 1`] = `
   >
     <h3
       className="chakra-text css-jjbsct"
-    >
-      Title
-    </h3>
+    />
     <p
       className="chakra-text css-vr7x6g"
     >

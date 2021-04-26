@@ -1,6 +1,6 @@
 import React from "react";
 import { signIn, signOut, useSession } from "next-auth/client";
-import { Grid, Text, Box, Button } from "@chakra-ui/react";
+import { Grid, Text, Box, Button, HStack } from "@chakra-ui/react";
 
 export default function Nav() {
   const [session, loading] = useSession();
@@ -13,16 +13,17 @@ export function View({ session, loading }) {
     <Grid
       as="nav"
       gridRow="nav"
+      gridColumn="sidebar / home"
       data-cy="nav"
-      templateColumns="[home] 120px [user] 1fr"
+      templateColumns="[title] 10rem [user] auto"
       m={2}
     >
       {/* MenuItems are not rendered unless Menu is open */}
-      <Box sx={{ gridColum: "home" }}>
+      <Box sx={{ gridColumn: "title" }}>
         <a href="/">thisbounty.com</a>
       </Box>
       {!session && (
-        <Box sx={{ gridColum: "user" }}>
+        <Box sx={{ gridColumn: "user" }}>
           <Button
             data-cy="signIn"
             bg="brand.200"
@@ -36,10 +37,18 @@ export function View({ session, loading }) {
       )}
       {session && (
         <Box sx={{ gridColum: "user" }}>
-          <Text fontSize="xs">Welcome, {session.user.name}</Text>
-          <Button data-cy="signOut" onClick={() => signOut()}>
-            Sign out
-          </Button>
+          <HStack spacing="24px">
+            <Text fontSize="xs">Welcome, {session.user.name}</Text>
+            <Button
+              data-cy="signOut"
+              bg="brand.200"
+              _hover={{ background: "brand.300" }}
+              size="xs"
+              onClick={() => signOut()}
+            >
+              Sign out
+            </Button>
+          </HStack>
         </Box>
       )}
     </Grid>

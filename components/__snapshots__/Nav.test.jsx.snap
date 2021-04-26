@@ -2,11 +2,11 @@
 
 exports[`renders correctly 1`] = `
 <nav
-  className="css-i6ei9o"
+  className="css-1p935yz"
   data-cy="nav"
 >
   <div
-    className="css-exb9x5"
+    className="css-1999t8h"
   >
     <a
       href="/"
@@ -15,7 +15,7 @@ exports[`renders correctly 1`] = `
     </a>
   </div>
   <div
-    className="css-ade8ji"
+    className="css-vil3vy"
   >
     <button
       className="chakra-button css-1v83zyk"
@@ -30,11 +30,11 @@ exports[`renders correctly 1`] = `
 
 exports[`renders correctly 2`] = `
 <nav
-  className="css-i6ei9o"
+  className="css-1p935yz"
   data-cy="nav"
 >
   <div
-    className="css-exb9x5"
+    className="css-1999t8h"
   >
     <a
       href="/"
@@ -45,19 +45,23 @@ exports[`renders correctly 2`] = `
   <div
     className="css-ade8ji"
   >
-    <p
-      className="chakra-text css-1lj023j"
+    <div
+      className="chakra-stack css-1y5q8ss"
     >
-      Welcome, 
-      test
-    </p>
-    <button
-      className="chakra-button css-oqfhsh"
-      data-cy="signOut"
-      onClick={[Function]}
-    >
-      Sign out
-    </button>
+      <p
+        className="chakra-text css-1lj023j"
+      >
+        Welcome, 
+        test
+      </p>
+      <button
+        className="chakra-button css-1v83zyk"
+        data-cy="signOut"
+        onClick={[Function]}
+      >
+        Sign out
+      </button>
+    </div>
   </div>
 </nav>
 `;

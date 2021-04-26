@@ -14,7 +14,26 @@ export default function Home() {
       <Nav />
 
       <Grid as="main" gridRow="body" gridColumn="content">
-        <Bounty img="/playing_cards/King of Hearts.png" />
+        <Bounty
+          slug="work"
+          title="Work"
+          img="/playing_cards/King of Hearts.png"
+        />
+        <Bounty
+          slug="pay"
+          title="Pay"
+          img="/playing_cards/King of Hearts.png"
+        />
+        <Bounty
+          slug="resale"
+          title="Resale"
+          img="/playing_cards/King of Hearts.png"
+        />
+        <Bounty
+          slug="salvage"
+          title="Salvage"
+          img="/playing_cards/King of Hearts.png"
+        />
       </Grid>
 
       <Box as="footer" sx={{ gridRow: "footer", gridColumn: "content" }}>
