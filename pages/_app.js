@@ -11,10 +11,9 @@ function MyApp({ Component, pageProps }) {
           data-cy="grid"
           templateColumns="[sidebar] 1fr [content] 3fr [info] 1fr"
           templateRows={[
-            "[nav] 40px [body] auto [footer] 80px",
-            "[nav] 100px [body] auto [footer] 400px",
+            "[nav] 2rem [body] auto [footer] 80px",
+            "[nav] 3rem [body] auto [footer] 200px",
           ]}
-          gap={6}
           bg="brand.400"
           color="white"
           minHeight="100vh"

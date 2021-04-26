@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <nav
-  className="css-1p935yz"
+  className="css-1gl8162"
   data-cy="nav"
 >
   <div
@@ -18,7 +18,7 @@ exports[`renders correctly 1`] = `
     className="css-vil3vy"
   >
     <button
-      className="chakra-button css-1v83zyk"
+      className="chakra-button css-1hpk4rx"
       data-cy="signIn"
       onClick={[Function]}
     >
@@ -30,7 +30,7 @@ exports[`renders correctly 1`] = `
 
 exports[`renders correctly 2`] = `
 <nav
-  className="css-1p935yz"
+  className="css-1gl8162"
   data-cy="nav"
 >
   <div
@@ -55,7 +55,7 @@ exports[`renders correctly 2`] = `
         test
       </p>
       <button
-        className="chakra-button css-1v83zyk"
+        className="chakra-button css-1hpk4rx"
         data-cy="signOut"
         onClick={[Function]}
       >

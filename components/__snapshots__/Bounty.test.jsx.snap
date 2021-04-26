@@ -2,20 +2,20 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="css-1mr5rgs"
+  className="css-10gh5eb"
   data-cy="bounty-undefined"
 >
   <img
     className="chakra-image__placeholder css-jcgxpa"
   />
   <div
-    className="css-1l0lp1p"
+    className="css-1tguv1s"
   >
     <h3
-      className="chakra-text css-jjbsct"
+      className="chakra-text css-rmwseu"
     />
     <p
-      className="chakra-text css-vr7x6g"
+      className="chakra-text css-6myaw6"
     >
       Life
     </p>

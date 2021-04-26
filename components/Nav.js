@@ -16,7 +16,8 @@ export function View({ session, loading }) {
       gridColumn="sidebar / home"
       data-cy="nav"
       templateColumns="[title] 10rem [user] auto"
-      m={2}
+      p={2}
+      bg="brand.200"
     >
       {/* MenuItems are not rendered unless Menu is open */}
       <Box sx={{ gridColumn: "title" }}>
@@ -26,7 +27,7 @@ export function View({ session, loading }) {
         <Box sx={{ gridColumn: "user" }}>
           <Button
             data-cy="signIn"
-            bg="brand.200"
+            bg="brand.600"
             _hover={{ background: "brand.300" }}
             size="xs"
             onClick={() => signIn()}
@@ -41,7 +42,7 @@ export function View({ session, loading }) {
             <Text fontSize="xs">Welcome, {session.user.name}</Text>
             <Button
               data-cy="signOut"
-              bg="brand.200"
+              bg="brand.600"
               _hover={{ background: "brand.300" }}
               size="xs"
               onClick={() => signOut()}

@@ -13,7 +13,15 @@ export default function Home() {
       </Head>
       <Nav />
 
-      <Grid as="main" gridRow="body" gridColumn="content">
+      <Grid
+        as="main"
+        gridRow="body"
+        gridColumn="content"
+        bg="brand.200"
+        pt={4}
+        maxWidth="300"
+        mx="auto"
+      >
         <Bounty
           slug="work"
           title="Work"
@@ -28,9 +36,18 @@ export default function Home() {
         />
       </Grid>
 
-      <Box as="footer" sx={{ gridRow: "footer", gridColumn: "content" }}>
-        <a href="/">Home</a>
-      </Box>
+      <Grid
+        as="footer"
+        gridRow="footer"
+        gridColumn="sidebar / -1"
+        bg="brand.200"
+        templateColumns="[sidebar] 1fr [content] 3fr [info] 1fr"
+        pt="10"
+      >
+        <Box sx={{ gridColumn: "content" }}>
+          <a href="/">Home</a>
+        </Box>
+      </Grid>
     </>
   );
 }
