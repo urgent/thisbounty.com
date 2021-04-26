@@ -19,20 +19,12 @@ export default function Home() {
           title="Work"
           img="/playing_cards/King of Hearts.png"
         />
-        <Bounty
-          slug="pay"
-          title="Pay"
-          img="/playing_cards/King of Hearts.png"
-        />
-        <Bounty
-          slug="resale"
-          title="Resale"
-          img="/playing_cards/King of Hearts.png"
-        />
+        <Bounty slug="pay" title="Pay" img="/flags/Blackbeard.png" />
+        <Bounty slug="resale" title="Resale" img="/hobo_signs/safe_camp.png" />
         <Bounty
           slug="salvage"
           title="Salvage"
-          img="/playing_cards/King of Hearts.png"
+          img="/paintings/treasure_island.png"
         />
       </Grid>
 
