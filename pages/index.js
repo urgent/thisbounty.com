@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Nav from "../components/Nav";
+import Bounty from "../components/Bounty";
 import { Grid, Box } from "@chakra-ui/react";
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
       <Nav />
 
       <Grid as="main" gridRow="body" gridColumn="content">
-        <h1>Welcome!</h1>
+        <Bounty img="/playing_cards/King of Hearts.png" />
       </Grid>
 
       <Box as="footer" sx={{ gridRow: "footer", gridColumn: "content" }}>

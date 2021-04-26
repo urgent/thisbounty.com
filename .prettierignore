@@ -5,5 +5,5 @@ yarn.lock
 .prettierignore
 components/__snapshots__/**/*
 .gitignore
-public/bio/*
+public/**/*
 .nvmrc
