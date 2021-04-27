@@ -28,7 +28,7 @@ export default function Home() {
           img="/playing_cards/King of Hearts.png"
           life={0}
         />
-        <Bounty slug="pay" title="Pay" img="/flags/Blackbeard.png" life={0} />
+        <Bounty slug="hire" title="Hire" img="/flags/Blackbeard.png" life={0} />
         <Bounty
           slug="resale"
           title="Resale"
