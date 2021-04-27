@@ -10,6 +10,14 @@
       "name": "Launch Chrome against localhost",
       "url": "http://localhost:3000",
       "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Jest Tests",
+      "program": "${workspaceRoot}/node_modules/.bin/jest",
+      "internalConsoleOptions": "openOnSessionStart",
+      "envFile": "${workspaceRoot}/.env"
     }
   ]
 }
