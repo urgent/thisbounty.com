@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Nav from "../components/Nav";
 import Bounty from "../components/Bounty";
-import { Grid, Box } from "@chakra-ui/react";
+import { Grid, Container, Text, Link } from "@chakra-ui/react";
 
 export default function Home() {
   return (
@@ -51,9 +51,12 @@ export default function Home() {
         templateColumns="[sidebar] 1fr [content] 3fr [info] 1fr"
         pt="10"
       >
-        <Box sx={{ gridColumn: "content" }}>
-          <a href="/">Home</a>
-        </Box>
+        <Container sx={{ gridColumn: "content" }} centerContent>
+          <Text>Websites and Apps &bull; Secondary Market</Text>
+          <Text>Free Start &bull; No Fee &bull; No Award Required</Text>
+          <Text>Fork on Github to Start</Text>
+          <Link href="/">Home</Link>
+        </Container>
       </Grid>
     </>
   );
