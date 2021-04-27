@@ -26,13 +26,20 @@ export default function Home() {
           slug="work"
           title="Work"
           img="/playing_cards/King of Hearts.png"
+          life={0}
         />
-        <Bounty slug="pay" title="Pay" img="/flags/Blackbeard.png" />
-        <Bounty slug="resale" title="Resale" img="/hobo_signs/safe_camp.png" />
+        <Bounty slug="pay" title="Pay" img="/flags/Blackbeard.png" life={0} />
+        <Bounty
+          slug="resale"
+          title="Resale"
+          img="/hobo_signs/safe_camp.png"
+          life={0}
+        />
         <Bounty
           slug="salvage"
           title="Salvage"
           img="/paintings/treasure_island.png"
+          life={0}
         />
       </Grid>
 

@@ -7,18 +7,25 @@ exports[`renders correctly 1`] = `
 >
   <img
     className="chakra-image__placeholder css-jcgxpa"
+    data-cy="bounty-undefined-image"
   />
   <div
-    className="css-1tguv1s"
+    className="css-17xslgs"
   >
     <h3
-      className="chakra-text css-rmwseu"
+      className="chakra-text css-rwwaiq"
+      data-cy="bounty-undefined-title"
     />
-    <p
-      className="chakra-text css-6myaw6"
+    <div
+      className="css-vr7x6g"
     >
-      Life
-    </p>
+      <p
+        className="chakra-text css-1lj023j"
+        data-cy="life"
+      >
+        -
+      </p>
+    </div>
   </div>
 </div>
 `;

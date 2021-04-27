@@ -1,7 +1,8 @@
 import React from "react";
-import { Grid, Image, Text, Box, Button } from "@chakra-ui/react";
+import { Grid, Image, Text, Box } from "@chakra-ui/react";
+import Life from "./Life";
 
-export default function Bounty({ slug, img, title }) {
+export default function Bounty({ slug, img, title, life }) {
   return (
     <Grid
       data-cy={`bounty-${slug}`}
@@ -9,14 +10,23 @@ export default function Bounty({ slug, img, title }) {
       w={300}
       my={1}
     >
-      <Image src={img} sx={{ gridColumn: "image" }} />
-      <Grid gridColumn="stats" templateRows="[title] 2em [life] 2em" ml={2}>
-        <Text as="h3" sx={{ gridRow: "title" }} mb={2}>
+      <Image
+        data-cy={`bounty-${slug}-image`}
+        src={img}
+        sx={{ gridColumn: "image" }}
+      />
+      <Grid gridColumn="stats" templateRows="[title] 1em [life] 1em" ml={2}>
+        <Text
+          data-cy={`bounty-${slug}-title`}
+          as="h3"
+          sx={{ gridRow: "title" }}
+          fontSize="xs"
+        >
           {title}
         </Text>
-        <Text sx={{ gridRow: "life" }} my={2}>
-          Life
-        </Text>
+        <Box sx={{ gridRow: "life" }}>
+          <Life amount={life} />
+        </Box>
       </Grid>
     </Grid>
   );
