@@ -7,3 +7,4 @@ components/__snapshots__/**/*
 .gitignore
 public/**/*
 .nvmrc
+*.prisma
