@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>No Catch, No Pay! thisbounty.com</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
