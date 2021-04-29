@@ -4,6 +4,37 @@ import Nav from "../components/Nav";
 import Bounty from "../components/Bounty";
 import { Grid, Container, Text, Link } from "@chakra-ui/react";
 
+const bounties = [
+  {
+    id: "work",
+    title: "Work",
+    img: "/playing_cards/King of Hearts.png",
+    damage: ["OAuth"],
+    level: 0,
+  },
+  {
+    id: "hire",
+    title: "Hire",
+    img: "/flags/Blackbeard.png",
+    damage: [],
+    level: 0,
+  },
+  {
+    id: "resale",
+    title: "Resale",
+    img: "/hobo_signs/safe_camp.png",
+    damage: [],
+    level: 0,
+  },
+  {
+    id: "salvage",
+    title: "Salvage",
+    img: "/paintings/treasure_island.png",
+    damage: [],
+    level: 0,
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -22,25 +53,9 @@ export default function Home() {
         maxWidth="300"
         mx="auto"
       >
-        <Bounty
-          slug="work"
-          title="Work"
-          img="/playing_cards/King of Hearts.png"
-          life={0}
-        />
-        <Bounty slug="hire" title="Hire" img="/flags/Blackbeard.png" life={0} />
-        <Bounty
-          slug="resale"
-          title="Resale"
-          img="/hobo_signs/safe_camp.png"
-          life={0}
-        />
-        <Bounty
-          slug="salvage"
-          title="Salvage"
-          img="/paintings/treasure_island.png"
-          life={0}
-        />
+        {bounties.map((bounty) => (
+          <Bounty {...bounty} />
+        ))}
       </Grid>
 
       <Grid
@@ -54,7 +69,7 @@ export default function Home() {
         <Container sx={{ gridColumn: "content" }} centerContent>
           <Text>Websites and Apps &bull; Secondary Market</Text>
           <Text>Free Start &bull; No Fee &bull; No Award Required</Text>
-          <Text>Fork on Github to Start</Text>
+          <Text>Click Pictures to Start</Text>
           <Link href="/">Home</Link>
         </Container>
       </Grid>
