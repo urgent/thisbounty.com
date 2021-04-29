@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="css-10gh5eb"
+  className="css-1om9n6p"
   data-cy="bounty-undefined"
 >
   <img

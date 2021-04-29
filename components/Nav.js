@@ -1,6 +1,8 @@
 import React from "react";
 import { signIn, signOut, useSession } from "next-auth/client";
 import { Grid, Text, Box, Button, HStack } from "@chakra-ui/react";
+import { Icon, Tooltip } from "@chakra-ui/react";
+import { RiFolderUploadLine } from "react-icons/ri";
 
 export default function Nav() {
   const [session, loading] = useSession();
@@ -23,8 +25,8 @@ export function View({ session, loading }) {
       <Box sx={{ gridColumn: "title" }}>
         <a href="/">thisbounty.com</a>
       </Box>
-      {!session && (
-        <Box sx={{ gridColumn: "user" }}>
+      <Box sx={{ gridColumn: "user" }}>
+        {!session && (
           <Button
             data-cy="signIn"
             bg="brand.600"
@@ -34,10 +36,8 @@ export function View({ session, loading }) {
           >
             Sign in
           </Button>
-        </Box>
-      )}
-      {session && (
-        <Box sx={{ gridColum: "user" }}>
+        )}
+        {session && (
           <HStack spacing="24px">
             <Text fontSize="xs">Welcome, {session.user.name}</Text>
             <Button
@@ -50,8 +50,22 @@ export function View({ session, loading }) {
               Sign out
             </Button>
           </HStack>
-        </Box>
-      )}
+        )}
+        <Button size="xs" bg="brand.400" _hover="brand.400">
+          <Tooltip
+            label="Up one"
+            aria-label={`up one`}
+            shouldWrapChildren={true}
+          >
+            <Icon
+              data-cy={`up one`}
+              as={RiFolderUploadLine}
+              color="white"
+              w="4"
+            />
+          </Tooltip>
+        </Button>
+      </Box>
     </Grid>
   );
 }

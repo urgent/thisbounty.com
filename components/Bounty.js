@@ -9,6 +9,7 @@ export default function Bounty({ id, img, title, damage, level }) {
       templateColumns="[image] 2fr [stats] 3fr"
       w={300}
       my={1}
+      sx={{ cursor: "pointer" }}
     >
       <Image
         data-cy={`bounty-${id}-image`}

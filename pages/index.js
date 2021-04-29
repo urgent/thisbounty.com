@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Nav from "../components/Nav";
 import Bounty from "../components/Bounty";
-import { Grid, Container, Text, Link } from "@chakra-ui/react";
+import { Grid, Container, Text, Link, Button } from "@chakra-ui/react";
 
 const bounties = [
   {
@@ -11,6 +11,7 @@ const bounties = [
     img: "/playing_cards/King of Hearts.png",
     damage: ["OAuth"],
     level: 0,
+    wd: 0,
   },
   {
     id: "hire",
@@ -18,6 +19,7 @@ const bounties = [
     img: "/flags/Blackbeard.png",
     damage: [],
     level: 0,
+    wd: 0,
   },
   {
     id: "resale",
@@ -25,6 +27,7 @@ const bounties = [
     img: "/hobo_signs/safe_camp.png",
     damage: [],
     level: 0,
+    wd: 0,
   },
   {
     id: "salvage",
@@ -32,6 +35,23 @@ const bounties = [
     img: "/paintings/treasure_island.png",
     damage: [],
     level: 0,
+    wd: 0,
+  },
+  {
+    id: "thisbounty",
+    title: "thisbounty.com",
+    img: "/playing_cards/Ace of Hearts.png",
+    damage: ["OAuth"],
+    level: 0,
+    wd: "work",
+  },
+  {
+    id: "thisbounty-oauth",
+    title: "OAuth",
+    img: "/playing_cards/Jack of Spades.png",
+    damage: ["OAuth"],
+    level: 0,
+    wd: "thisbounty",
   },
 ];
 
@@ -43,7 +63,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
-
       <Grid
         as="main"
         gridRow="body"
