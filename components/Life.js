@@ -15,14 +15,9 @@ export default ({ level = 0, damage }) => {
           label={hurt}
           aria-label={`Hurt damage ${i}`}
           shouldWrapChildren={true}
+          key={`damage-${i}`}
         >
-          <Icon
-            data-cy={`damage`}
-            as={FaRegHeart}
-            key={`damage-${i}`}
-            color="red.500"
-            w="4"
-          />
+          <Icon data-cy={`damage`} as={FaRegHeart} color="red.500" w="4" />
         </Tooltip>
       ))}
     </>

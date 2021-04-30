@@ -49,6 +49,11 @@ export default function Bounties({ bounties }) {
 export const getServerSideProps = async ({ params }) => {
   const bounties = await prisma.bounty.findMany({
     where: { wd: params?.id },
+    include: {
+      child: {
+        select: { id: true },
+      },
+    },
     orderBy: {
       rank: "asc",
     },

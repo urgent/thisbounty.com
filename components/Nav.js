@@ -51,20 +51,6 @@ export function View({ session, loading }) {
             </Button>
           </HStack>
         )}
-        <Button size="xs" bg="brand.400" _hover="brand.400">
-          <Tooltip
-            label="Up one"
-            aria-label={`up one`}
-            shouldWrapChildren={true}
-          >
-            <Icon
-              data-cy={`up one`}
-              as={RiFolderUploadLine}
-              color="white"
-              w="4"
-            />
-          </Tooltip>
-        </Button>
       </Box>
     </Grid>
   );

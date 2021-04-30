@@ -24,47 +24,6 @@ exports[`renders correctly 1`] = `
     >
       Sign in
     </button>
-    <button
-      className="chakra-button css-1m9o6qc"
-    >
-      <span
-        className="css-0"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        tabIndex={0}
-      >
-        <svg
-          className="chakra-icon css-1vv888v"
-          data-cy="up one"
-          fill="currentColor"
-          focusable={false}
-          height="1em"
-          stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
-          viewBox="0 0 24 24"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g>
-            <path
-              d="M0 0h24v24H0z"
-              fill="none"
-            />
-            <path
-              d="M12.414 5H21a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h7.414l2 2zM4 5v14h16V7h-8.414l-2-2H4zm9 8v4h-2v-4H8l4-4 4 4h-3z"
-            />
-          </g>
-        </svg>
-      </span>
-    </button>
   </div>
 </nav>
 `;
@@ -103,47 +62,6 @@ exports[`renders correctly 2`] = `
         Sign out
       </button>
     </div>
-    <button
-      className="chakra-button css-1m9o6qc"
-    >
-      <span
-        className="css-0"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        tabIndex={0}
-      >
-        <svg
-          className="chakra-icon css-1vv888v"
-          data-cy="up one"
-          fill="currentColor"
-          focusable={false}
-          height="1em"
-          stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
-          viewBox="0 0 24 24"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g>
-            <path
-              d="M0 0h24v24H0z"
-              fill="none"
-            />
-            <path
-              d="M12.414 5H21a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h7.414l2 2zM4 5v14h16V7h-8.414l-2-2H4zm9 8v4h-2v-4H8l4-4 4 4h-3z"
-            />
-          </g>
-        </svg>
-      </span>
-    </button>
   </div>
 </nav>
 `;
