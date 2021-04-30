@@ -7,8 +7,8 @@ describe('Bounty', () => {
     })
     it('navigates', () => {
         cy.visit('/bounty/work')
-        cy.get('[data-cy=bounty-thisbounty]').should('be.visible')
-        cy.get('[data-cy=bounty-thisbounty-image]').should('be.visible')
-        cy.get('[data-cy=bounty-thisbounty-title]').should('be.visible')
+        cy.get('[data-cy=bounty-setup]').should('be.visible')
+        cy.get('[data-cy=bounty-setup-image]').should('be.visible')
+        cy.get('[data-cy=bounty-setup-title]').should('be.visible')
     })
 })

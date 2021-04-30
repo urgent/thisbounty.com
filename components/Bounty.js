@@ -4,7 +4,7 @@ import Life from "./Life";
 import Link from "next/link";
 
 export default function Bounty({ id, img, title, damage, level, child }) {
-  if (child) {
+  if (child?.length) {
     return (
       <Link href={`/bounty/${id}`}>
         <View
@@ -32,7 +32,7 @@ export default function Bounty({ id, img, title, damage, level, child }) {
 }
 
 const View = React.forwardRef(
-  ({ onClick, href, id, img, title, damage, level, cursor }, ref) => {
+  ({ onClick, id, img, title, damage, level, cursor, key }, ref) => {
     return (
       <Grid
         data-cy={`bounty-${id}`}
@@ -43,6 +43,7 @@ const View = React.forwardRef(
         sx={{ cursor: cursor }}
         onClick={onClick}
         ref={ref}
+        key={key}
       >
         <Image
           data-cy={`bounty-${id}-image`}

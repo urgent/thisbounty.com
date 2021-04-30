@@ -16,7 +16,7 @@ model Bounty {
   wd     String?
   rank   Int?
   parent Bounty?  @relation("BountyPath", fields: [wd], references: [id])
-  child  Bounty?  @relation("BountyPath")
+  child  Bounty[] @relation("BountyPath")
 }
 
 model User {
