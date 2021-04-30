@@ -3,7 +3,9 @@ import Head from "next/head";
 import Nav from "../components/Nav";
 import Bounty from "../components/Bounty";
 import { Grid, Container, Text, Link, Button } from "@chakra-ui/react";
+import prisma from "../lib/prisma";
 
+/*
 const bounties = [
   {
     id: "work",
@@ -53,9 +55,9 @@ const bounties = [
     level: 0,
     wd: "thisbounty",
   },
-];
+];*/
 
-export default function Home() {
+export default function Home({ bounties }) {
   return (
     <>
       <Head>
@@ -73,7 +75,7 @@ export default function Home() {
         mx="auto"
       >
         {bounties.map((bounty) => (
-          <Bounty {...bounty} />
+          <Bounty {...bounty} key={bounty.id} />
         ))}
       </Grid>
 
@@ -95,3 +97,18 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps = async () => {
+  const bounties = await prisma.bounty.findMany({
+    where: { wd: null },
+    include: {
+      child: {
+        select: { id: true },
+      },
+    },
+    orderBy: {
+      rank: "asc",
+    },
+  });
+  return { props: { bounties } };
+};

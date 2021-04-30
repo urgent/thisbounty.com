@@ -7,6 +7,18 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Bounty {
+  id     String   @unique
+  title  String
+  img    String
+  damage String[]
+  level  Int
+  wd     String?
+  rank   Int?
+  parent Bounty?  @relation("BountyPath", fields: [wd], references: [id])
+  child  Bounty?  @relation("BountyPath")
+}
+
 model User {
   id            Int       @id @default(autoincrement())
   name          String?
