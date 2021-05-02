@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Nav from "../../components/Nav";
 import Bounty from "../../components/Bounty";
-import { Grid, Container, Text, Link, Button } from "@chakra-ui/react";
+import { Grid, Container, Text, Link, Box } from "@chakra-ui/react";
 import prisma from "../../lib/prisma";
 
 export default function Bounties({ bounties }) {
@@ -21,6 +21,7 @@ export default function Bounties({ bounties }) {
         pt={4}
         maxWidth="300"
         mx="auto"
+        gridTemplateRows="1fr 1fr 1fr 1fr"
       >
         {bounties.map((bounty) => (
           <Bounty {...bounty} />
@@ -47,11 +48,18 @@ export default function Bounties({ bounties }) {
 }
 
 export const getServerSideProps = async ({ params }) => {
+  if (!params?.id) {
+    params.id = null;
+  }
+
   const bounties = await prisma.bounty.findMany({
     where: { wd: params?.id },
     include: {
       child: {
         select: { id: true },
+      },
+      parent: {
+        select: { wd: true },
       },
     },
     orderBy: {

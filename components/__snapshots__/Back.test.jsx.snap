@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="css-1n533yk"
+>
+  <p
+    className="chakra-text css-1ykves1"
+    data-cy="back-work"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+  />
+</div>
+`;

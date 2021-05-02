@@ -1,9 +1,9 @@
 import React from "react";
 import Head from "next/head";
-import Nav from "../components/Nav";
-import Bounty from "../components/Bounty";
+import Nav from "../../components/Nav";
+import Bounty from "../../components/Bounty";
 import { Grid, Container, Text, Link, Button } from "@chakra-ui/react";
-import prisma from "../lib/prisma";
+import prisma from "../../lib/prisma";
 
 export default function Home({ bounties }) {
   return (
