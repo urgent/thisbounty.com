@@ -52,7 +52,7 @@ export const getServerSideProps = async ({ params }) => {
     params.id = null;
   }
 
-  const bounties = await prisma.Bounty.findMany({
+  const bounties = await prisma.bounty.findMany({
     where: { wd: params?.id },
     include: {
       child: {
