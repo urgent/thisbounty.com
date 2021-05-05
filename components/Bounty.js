@@ -55,7 +55,6 @@ export default function Bounty({
   level,
   child,
   parent,
-  key,
 }) {
   return (
     <Grid
@@ -64,7 +63,7 @@ export default function Bounty({
       w={300}
       h={140}
       my={1}
-      key={key}
+      key={id}
     >
       {back({ parent, id })}
       <Image
