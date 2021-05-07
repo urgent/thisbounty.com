@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Image, Text, Box } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 import fetch from "isomorphic-fetch";
 
 export async function fork(token) {
@@ -14,4 +14,8 @@ export async function fork(token) {
     }
   );
   return res;
+}
+
+export function Fork() {
+  return <Button onClick={() => alert("fork")} />;
 }
