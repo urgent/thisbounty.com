@@ -1,6 +1,7 @@
 import React from "react";
-import { Button } from "@chakra-ui/react";
 import fetch from "isomorphic-fetch";
+import { Icon } from "@chakra-ui/react";
+import { AiOutlineFork } from "react-icons/ai";
 
 export async function fork(token) {
   const res = await fetch(
@@ -16,6 +17,17 @@ export async function fork(token) {
   return res;
 }
 
-export function Fork() {
-  return <Button onClick={() => alert("fork")} />;
+export default function Fork() {
+  return (
+    <Icon
+      data-cy={`fork`}
+      as={AiOutlineFork}
+      color="white"
+      w={6}
+      h={6}
+      my={2}
+      sx={{ cursor: "pointer" }}
+      onClick={() => alert("fork")}
+    />
+  );
 }

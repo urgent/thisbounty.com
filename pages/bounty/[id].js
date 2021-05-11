@@ -4,6 +4,7 @@ import Nav from "../../components/Nav";
 import Bounty from "../../components/Bounty";
 import { Grid, Container, Text, Link, Box } from "@chakra-ui/react";
 import prisma from "../../lib/prisma";
+import { serialize } from "next-mdx-remote/serialize";
 
 export default function Bounties({ bounties }) {
   return (
@@ -24,7 +25,7 @@ export default function Bounties({ bounties }) {
         gridTemplateRows="1fr 1fr 1fr 1fr"
       >
         {bounties.map((bounty) => (
-          <Bounty {...bounty} />
+          <Bounty {...bounty} key={bounty.id} />
         ))}
       </Grid>
 
@@ -66,5 +67,10 @@ export const getServerSideProps = async ({ params }) => {
       rank: "asc",
     },
   });
+
+  for (let bounty of bounties) {
+    bounty.serialized = await serialize(bounty.mdx);
+  }
+
   return { props: { bounties } };
 };

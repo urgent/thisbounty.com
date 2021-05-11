@@ -3,6 +3,8 @@ import { Grid, Image, Text, Box } from "@chakra-ui/react";
 import Life from "./Life";
 import Link from "next/link";
 import Back from "./Back";
+import { MDXRemote } from "next-mdx-remote";
+import Fork from "./Fork";
 
 function back({ parent, id }) {
   // parent id specified `/bounty/${parent.wd}`
@@ -35,6 +37,7 @@ function name({ title, id, child }) {
       </Link>
     );
   }
+
   return (
     <Text
       data-cy={`bounty-${id}-title`}
@@ -47,6 +50,16 @@ function name({ title, id, child }) {
   );
 }
 
+const components = { Fork };
+
+function assemble(serialized) {
+  if (serialized) {
+    return <MDXRemote {...serialized} components={components} />;
+  } else {
+    return <></>;
+  }
+}
+
 export default function Bounty({
   id,
   img,
@@ -55,6 +68,8 @@ export default function Bounty({
   level,
   child,
   parent,
+  mdx,
+  serialized,
 }) {
   return (
     <Grid
@@ -76,6 +91,7 @@ export default function Bounty({
         <Box sx={{ gridRow: "life" }}>
           <Life level={level} damage={damage} />
         </Box>
+        {assemble(serialized)}
       </Grid>
     </Grid>
   );

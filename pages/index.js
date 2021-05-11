@@ -4,6 +4,7 @@ import Nav from "../components/Nav";
 import Bounty from "../components/Bounty";
 import { Grid, Container, Text, Link, Button } from "@chakra-ui/react";
 import prisma from "../lib/prisma";
+import { serialize } from "next-mdx-remote/serialize";
 
 export default function Home({ bounties }) {
   return (
@@ -59,5 +60,10 @@ export const getStaticProps = async () => {
       rank: "asc",
     },
   });
+
+  for (let bounty of bounties) {
+    bounty.serialized = await serialize(bounty.mdx);
+  }
+
   return { props: { bounties } };
 };
