@@ -1,8 +1,6 @@
 import React from "react";
 import { signIn, signOut, useSession } from "next-auth/client";
 import { Grid, Text, Box, Button, HStack } from "@chakra-ui/react";
-import { Icon, Tooltip } from "@chakra-ui/react";
-import { RiFolderUploadLine } from "react-icons/ri";
 
 export default function Nav() {
   const [session, loading] = useSession();
